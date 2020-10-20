@@ -1,24 +1,18 @@
 <template>
   <div>
-    <h2>Vue Formulate</h2>
+    <h1>A little about you</h1>
+    <h4> Please fill some of the basics details to get started</h4>
     <FormulateForm v-model="formValues" @submit="handleSubmit">
       <FormulateInput name="name" label="Name" validation="required" />
-      <FormulateInput type="email" name="email" label="Email" validation="required|email" />
-      <FormulateInput name="username" label="Username" validation="required" />
-      <FormulateInput type="password" name="password" label="Password" validation="required" />
-      <FormulateInput
-        type="select"
-        name="favoriteLanguage"
-        label="Favorite Language"
-        :options="{Javascript: 'Javascript', VueJs: 'VueJs', CSS3: 'CSS3', HTML5: 'HTML5'}"
-      />
-      <FormulateInput
-        type="checkbox"
-        name="acceptTerms"
-        label="Accept Terms"
-        validation="required"
-      />
-      <FormulateInput type="submit" label="Sign Up" />
+      <FormulateInput name="lastname" label="Last Name" validation="required" />
+     <FormulateInput
+  v-model="value"
+  :options="{first: 'Buyer', second: 'Seller'}"
+  type="radio"
+  label="Choose a role that better defines you."
+/>
+      
+      <FormulateInput type="submit" label="Submit" />
     </FormulateForm>
     <h3>Values:</h3>
     {{formValues}}
