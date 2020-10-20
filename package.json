@@ -10,8 +10,11 @@
   "dependencies": {
     "@braid/vue-formulate": "^2.4.0",
     "core-js": "^3.6.5",
+    "libphonenumber-js": "^1.8.4",
     "vue": "^2.6.11",
-    "vue-form-generator": "^2.3.4"
+    "vue-form-generator": "^2.3.4",
+    "vue-phone-number-input": "^1.1.10",
+    "vue-tel-input": "^4.4.1"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^4.4.0",
