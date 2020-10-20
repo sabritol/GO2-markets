@@ -7,13 +7,12 @@
 
 <script>
 import VueFormulate from './components/VueFormulate';
-import VueFormGenerator from './components/VueFormGenerator';
 
 export default {
   name: 'App',
   components: {
-    VueFormulate,
-    VueFormGenerator    
+    VueFormulate
+      
   }
 }
 </script>
