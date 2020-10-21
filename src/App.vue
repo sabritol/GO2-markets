@@ -11,11 +11,12 @@
 
 <script>
 import VueFormulate from './components/VueFormulate';
-
+import VuePhoneNumberInput from 'vue-phone-number-input';
 export default {
   name: 'App',
   components: {
-    VueFormulate
+    VueFormulate,
+    VuePhoneNumberInput
       
   }
 }
