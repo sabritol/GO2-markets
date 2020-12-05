@@ -1,12 +1,12 @@
 <template>
   <div>
     <h1>A little about you</h1>
-    <h5> Please fill some of the basics details to get started.</h5>
+    <p> Please fill some of the basics details to get started.</p>
     <FormulateForm v-model="formValues" @submit="handleSubmit" >
       <FormulateInput name="name" placeholder="First Name" validation="required" label-class= "first-name"/>
-      <FormulateInput name="lastname" placeholder="Last Name" validation="required" />
+      <FormulateInput name="lastname" placeholder="Last Name" validation="required" label-class= "last-name" />
       <!-- <vuePhoneNumberInput v-model="VuePhoneNumberInput" />  -->
-       <FormulateInput v-model="VuePhoneNumberInput"/>
+       <!-- <FormulateInput v-model="VuePhoneNumberInput"/> -->
                
 
 <!-- 
@@ -16,11 +16,13 @@
   type="radio"
   label="Select your role"
 /> -->
-
+<h3>Select your role</h3>
+<p> Choose a role that better defines you. </p>
 <FormulateInput
   v-model="value"
   type="radio"
   label="Buyer"
+  style=""
 />
 
 <FormulateInput
@@ -68,7 +70,7 @@ text-align: right;
 letter-spacing: -0.06em;
 color: #242424;
 }
-h5 { position: static;
+p { position: static;
 width: 264px;
 height: 48px;
 left: 0px;
@@ -85,23 +87,24 @@ order: 1;
 flex-grow: 0;
 margin: 0px 8px;
 }
-first-name { position: static;
-width: 166px;
-height: 56px;
+h3 {
+  position: static;
+width: 138px;
+height: 23px;
 left: 0px;
 top: 0px;
-
-background: #FFFFFF;
-border: 1px solid #E0E0E0;
-box-sizing: border-box;
-border-radius: 4px;
-
-/* Inside Auto Layout */
-
+font-family: Work Sans;
+font-style: normal;
+font-weight: 600;
+font-size: 20px;
+line-height: 23px;
+text-align: right;
+letter-spacing: -0.06em;
+color: #242424;
 flex: none;
 order: 0;
 flex-grow: 0;
-margin: 16px 0px;
+margin: 0px 8px;
 }
 
 </style>
