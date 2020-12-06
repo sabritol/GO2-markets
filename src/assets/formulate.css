@@ -64,7 +64,6 @@
   box-sizing: border-box;
   background-color: transparent;
   font-size: 0.9em;
- 
   padding: 0.75em;
   display: block;
   width: 100%;
@@ -73,18 +72,20 @@
   margin: 0;
   position: relative;
   font-family: 'Work Sans', sans-serif;}
+ 
+
 .formulate-input[data-classification="text"] input::placeholder {
   position: absolute;
   left: 0%;
   right: -92%;
   top: 0%;
   bottom: 0%;
-  
   font-family: 'Work Sans', sans-serif;  font-style: normal;
   font-weight: normal;
   font-size: 10px;
   line-height: 12px;  
   letter-spacing: -0.06em;
+  
   
   
 }
@@ -101,16 +102,13 @@
   appearance: none;
   border-radius: 0em;
   box-sizing: border-box;
-  font-size: 0.9em;
-  font-family: "WorkSans";
   font-style: normal;
   font-weight: bold;
   font-size: 18px;
   line-height: 21px;
   text-align: center;
   letter-spacing: -0.06em;
-  font-weight: 700;
-  font-size: 16.89px;
+  
   font-family: 'Work Sans', sans-serif;
   padding: 0.75em;
   display: block;
@@ -124,7 +122,6 @@
   background-color: #242424;
   color: #fff;
   min-width: 0;
-  font-weight: 700;
   cursor: pointer;
   display: inline-flex;
   align-items: center;
@@ -147,7 +144,7 @@
   overflow: hidden;
   display: flex;
   align-items: center;
-  background-color: red;
+  background-color: rgb(0, 89, 255);
   
 }
 .formulate-input[data-classification="box"] .formulate-input-element input {
@@ -155,7 +152,7 @@
   left: -999px;
   opacity: 0;
   pointer-events: none;
-  background-color: red;
+  background-color: rgb(255, 208, 0);
   
 }
 .formulate-input[data-classification="box"] .formulate-input-element-decorator {
@@ -175,7 +172,7 @@
   content: "";
   display: block;
   background-size: contain;
-  background-position: 100%;
+  background-position: 50%;
   width: calc(100% - 0.125em);
   height: calc(100% - 0.125em);
   box-sizing: border-box;
@@ -233,12 +230,14 @@
   height: 18px;
   left: 34px;
   top: 1px;
+  text-align:center;
   font-style: normal;
   font-weight: normal;
   font-size: 15px;
   line-height: 18px;
   letter-spacing: -0.06em;
   color: #242424;
+
 
 
 

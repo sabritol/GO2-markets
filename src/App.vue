@@ -27,10 +27,6 @@ export default {
 
 <style>
 #app {
-  font-family:-apple-system, BlinkMacSystemFont, avenir next, avenir, helvetica neue, helvetica, Ubuntu, roboto, noto, segoe ui, arial, sans-serif;;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  color: #2c3e50;
-  margin: 10vh 20vw;
+ margin: 10vh 35vw;
 }
 </style>
