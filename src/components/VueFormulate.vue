@@ -1,13 +1,16 @@
 <template>
   <div>
     <h1>A little about you</h1>
+    
     <p> Please fill some of the basics details to get started.</p>
-    <FormulateForm v-model="formValues" @submit="handleSubmit" >
-      <FormulateInput name="name" placeholder="First Name" validation="required"/>
+    <FormulateForm v-model="formValues" @submit="handleSubmit">
+
+      <div class="names">
+      <FormulateInput name="name" placeholder="First Name" validation="required" />
       <FormulateInput name="lastname" placeholder="Last Name" validation="required" />
       <!-- <vuePhoneNumberInput v-model="VuePhoneNumberInput" />  -->
        <!-- <FormulateInput v-model="VuePhoneNumberInput"/> -->
-               
+      </div>       
 
 <!-- 
   <FormulateInput
@@ -18,6 +21,7 @@
 /> -->
       <h3>Select your role</h3>
       <p> Choose a role that better defines you. </p>
+      <div class="role">
       <FormulateInput
       v-model="value"
       type="radio"
@@ -30,6 +34,7 @@
       type="radio"
       label="Seller"
       />
+      </div>  
           
       <FormulateInput type="submit" label="Submit" />
     </FormulateForm>
@@ -70,7 +75,8 @@ letter-spacing: -0.06em;
 color: #242424;
 font-family: 'Work Sans', sans-serif;}
 
-p { position: static;
+p {
+position: static;
 width: 264px;
 height: 48px;
 left: 0px;
@@ -89,6 +95,15 @@ margin: 0px 8px;
 text-align:left;
 
 }
+.names {
+  display: grid;
+  grid-template-columns: 1fr 1fr
+  }
+.role {
+  display: grid;
+  grid-template-columns: 1fr 1fr
+
+}  
 
 h3 {
   position: static;

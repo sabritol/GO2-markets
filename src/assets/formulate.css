@@ -1,33 +1,50 @@
 .formulate-input {
-  position: static;
+  display: inline-flex;
+  flex-direction: row;
   width: 166px;
   height: 56px;
   left: 0px;
   top: 0px;
   background: #FFFFFF;
-  flex: none;
   order: 0;
-  flex-grow: 0;
   margin: 16px 0px;
   font-family: 'Work Sans', sans-serif;
 }
 
 .formulate-input .formulate-input-label {
-  display: block;
+  display: flex;
+  font-style: normal;
   line-height: 1.5;
-  font-size: 0.9em;
-  font-weight: 600;
+  font-size: 15px;
+  font-weight: 400;
   margin-bottom: 0.1em;
+  /* background-color: slateblue; */
+  width: 38px;
+  height: 18px;
+  left: 34px;
+  top: 1px;
+  letter-spacing: -0.06em;  
+  color: #242424;
+
 }
+
+/* averiguar que es esto */
 .formulate-input
   .formulate-input-label--before
   + .formulate-input-help--before {
   margin-top: -0.25em;
   margin-bottom: 0.75em;
+  
+  
 }
 .formulate-input .formulate-input-element {
   max-width: 20em;
   margin-bottom: 0.1em;
+  /* background-color: tomato; */
+  
+
+  
+
 }
 
 .formulate-input .formulate-input-errors {
@@ -47,10 +64,13 @@
   top: 107.14%;
   bottom: -28.57%;
   
+  
 }
 .formulate-input:last-child {
   margin-bottom: 0;
   border: none;
+  
+
 }
 .formulate-input[data-classification="text"] input {
   -webkit-appearance: none;
@@ -71,7 +91,8 @@
   line-height: 1.2em;
   margin: 0;
   position: relative;
-  font-family: 'Work Sans', sans-serif;}
+  font-family: 'Work Sans', sans-serif;
+}
  
 
 .formulate-input[data-classification="text"] input::placeholder {
@@ -108,40 +129,39 @@
   line-height: 21px;
   text-align: center;
   letter-spacing: -0.06em;
-  
   font-family: 'Work Sans', sans-serif;
   padding: 0.75em;
-  display: block;
+  display: inline-block;
   width: 348px;
   height: 56px;
   left: 30.03px;
   top: 603.42px;
-  
   line-height: 1.2em;
   border: 1px solid #E0E0E0;
   background-color: #242424;
   color: #fff;
   min-width: 0;
   cursor: pointer;
-  display: inline-flex;
   align-items: center;
 }
+  
 
 
 
 .formulate-input[data-classification="box"] .formulate-input-wrapper {
   display: flex;
+  
   align-items: center;
   background: rgba(96, 196, 159, 0.1);
   border: 1px solid #60C49F;
   box-sizing: border-box;
   border-radius: 0px;
-  position: static;
   width: 166px;
   height: 56px;
+  /* background-color: yellow; */
 }
 .formulate-input[data-classification="box"] .formulate-input-element {
-  overflow: hidden;
+  overflow: visible;
   display: flex;
   align-items: center;
   background-color: rgb(0, 89, 255);
@@ -198,12 +218,14 @@
   height: calc(100% - 0.5em);
   top: 0.25em;
   left: 0.25em;
+  
 }
 .formulate-input[data-classification="box"]
   .formulate-input-element
   input[type="checkbox"]:checked
   ~ .formulate-input-element-decorator {
   border-color: #41b883;
+  
 
 }
 .formulate-input[data-classification="box"]
@@ -213,6 +235,7 @@
   border-color: #41b883;
   background: #60C49F;
   box-shadow: 0px 0px 8px rgba(96, 196, 159, 0.5);
+  
 
   
 }
@@ -221,6 +244,7 @@
   input[type="radio"]:checked
   ~ .formulate-input-element-decorator:before {
   background-color: #f5f5f3;
+  
 
 }
 .formulate-input[data-classification="box"] .formulate-input-label--after {
@@ -245,6 +269,7 @@
 }
 .formulate-input[data-classification="box"] .formulate-input-label--before {
   margin-right: 10em;
+  
 }
 
 
