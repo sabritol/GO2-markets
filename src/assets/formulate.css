@@ -2,6 +2,7 @@
   display: inline-flex;
   flex-direction: row;
   width: 166px;
+  position: static;
   height: 56px;
   left: 0px;
   top: 0px;
@@ -43,8 +44,6 @@
   /* background-color: tomato; */
   
 
-  
-
 }
 
 .formulate-input .formulate-input-errors {
@@ -76,40 +75,46 @@
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  width: 155.78px;
-  height: 52.55px;
-  position: static;
   border-radius: 4px;
   border: 1px solid #E0E0E0;
+  color: #242424;
   box-sizing: border-box;
   background-color: transparent;
-  font-size: 0.9em;
   padding: 0.75em;
   display: block;
   width: 100%;
-  font-weight: 400;
-  line-height: 1.2em;
-  margin: 0;
-  position: relative;
+  font-weight: normal;
+  letter-spacing: -0.06em;
+  line-height: 19px;
+  font-size: 16px;
   font-family: 'Work Sans', sans-serif;
 }
- 
+  
+  
+/* .formulate-input[data-classification="text"] input:placeholder-shown { */
+  
 
 .formulate-input[data-classification="text"] input::placeholder {
+  
   position: absolute;
+  padding: -20px 1px;
+  text-indent: 4px;
+  transform: translate(-4%, -25%);
   left: 0%;
-  right: -92%;
+  right: -98%;
   top: 0%;
-  bottom: 0%;
-  font-family: 'Work Sans', sans-serif;  font-style: normal;
+  bottom: 7%;
+  font-family: 'Work Sans', sans-serif; 
+  font-style: normal;
   font-weight: normal;
   font-size: 10px;
-  line-height: 12px;  
   letter-spacing: -0.06em;
+ }
+ 
   
   
   
-}
+
 .formulate-input[data-classification="text"] input:focus {
   outline: 0;
   border: 1px solid #2e2d2d;
@@ -164,7 +169,7 @@
   overflow: visible;
   display: flex;
   align-items: center;
-  background-color: rgb(0, 89, 255);
+  /* background-color: rgb(0, 89, 255); */
   
 }
 .formulate-input[data-classification="box"] .formulate-input-element input {
@@ -248,7 +253,7 @@
 
 }
 .formulate-input[data-classification="box"] .formulate-input-label--after {
-  margin-left: 3em;
+  margin-left: 1em;
   font-size: 15px;
   width: 38px;
   height: 18px;
@@ -261,10 +266,6 @@
   line-height: 18px;
   letter-spacing: -0.06em;
   color: #242424;
-
-
-
-
 
 }
 .formulate-input[data-classification="box"] .formulate-input-label--before {

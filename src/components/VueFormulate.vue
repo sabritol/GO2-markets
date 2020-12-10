@@ -6,19 +6,12 @@
     <FormulateForm v-model="formValues" @submit="handleSubmit">
 
       <div class="names">
-      <FormulateInput name="name" placeholder="First Name" validation="required" />
-      <FormulateInput name="lastname" placeholder="Last Name" validation="required" />
+      <FormulateInput name="name" placeholder="First Name"  />
+      <FormulateInput name="lastname" placeholder="Last Name"  />
       <!-- <vuePhoneNumberInput v-model="VuePhoneNumberInput" />  -->
        <!-- <FormulateInput v-model="VuePhoneNumberInput"/> -->
       </div>       
 
-<!-- 
-  <FormulateInput
-  v-model="value"
-  :options="{first: 'Buyer', second: 'Seller'}"
-  type="radio"
-  label="Select your role"
-/> -->
       <h3>Select your role</h3>
       <p> Choose a role that better defines you. </p>
       <div class="role">
@@ -61,13 +54,14 @@ export default {
 
 <style scoped>
 h1 {
+margin: 3%;  
 position: static;
 width: 268px;
 height: 42px;
 left: 0px;
 top: 0px;
 font-style:normal;
-font-weight: bold;
+font-weight: 600;
 font-size: 36px;
 line-height: 42px;
 text-align:left;
@@ -97,7 +91,8 @@ text-align:left;
 }
 .names {
   display: grid;
-  grid-template-columns: 1fr 1fr
+  grid-template-columns: 1fr 1fr;
+  position: static;
   }
 .role {
   display: grid;
@@ -106,7 +101,7 @@ text-align:left;
 }  
 
 h3 {
-  position: static;
+position: static;
 width: 138px;
 height: 23px;
 left: 0px;
