@@ -3,14 +3,23 @@
     <h1>A little about you</h1>
     
     <p> Please fill some of the basics details to get started.</p>
-    <FormulateForm v-model="formValues" @submit="handleSubmit">
+    <FormulateForm v-model="formValues" @submit="handleSubmit" @input="performValidation"
+        ref="form" >
 
       <div class="names">
       <FormulateInput name="name" placeholder="First Name"  />
       <FormulateInput name="lastname" placeholder="Last Name"  />
-      <!-- <vuePhoneNumberInput v-model="VuePhoneNumberInput" />  -->
-       <!-- <FormulateInput v-model="VuePhoneNumberInput"/> -->
-      </div>       
+      
+      </div>   
+
+          
+      <!-- <div class="phone"> -->
+      <FormulateInput
+      v-model="VuePhoneNumberInput"
+       type="number"
+       validation="required" />
+      <!-- </div>    -->
+
 
       <h3>Select your role</h3>
       <p> Choose a role that better defines you. </p>
@@ -29,7 +38,7 @@
       />
       </div>  
           
-      <FormulateInput type="submit" label="Submit" />
+      <FormulateInput type="submit" label="Submit" :disabled="hasErrors"/>
     </FormulateForm>
     <h3>Values:</h3>
     {{formValues}}
@@ -43,12 +52,20 @@ export default {
     formValues: {},
     VuePhoneNumberInput: {}
   }),
+
+    // hasErrors: true
   methods: {
     handleSubmit() {
-        console.log(this.formValues)
-    }
+        console.log(this.formValues && this.VuePhoneNumberInput)}
+  
+      }
   }
-  };
+
+    // async performValidation () {
+    //   this.hasErrors = await this.$refs.form.hasValidationErrors()
+    // }
+
+  
 
 </script>
 
