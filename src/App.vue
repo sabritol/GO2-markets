@@ -1,9 +1,9 @@
 <template>
   <div id="app">
     <vue-formulate>
-     <vue-phone-number-input>
-      </vue-phone-number-input>
-         
+     <!-- <vue-phone-number-input>
+      </vue-phone-number-input> -->
+         <VuePhoneNumberInput v-model="yourValue" />
       </vue-formulate>
     </div>
 
