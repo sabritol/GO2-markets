@@ -1,11 +1,11 @@
 <template>
   <div id="app">
-    <vue-formulate />
-    <!-- <vue-phone-number-input v-model="phone" :disabled-fetching-country="true" :no-use-browser-locale="true"></vue-phone-number-input>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/vue-phone-number-input@1.1.9/dist/vue-phone-number-input.css"> -->
-<VuePhoneNumberInput v-model="yourValue" />
-
-</div>
+    <vue-formulate>
+     <vue-phone-number-input>
+      </vue-phone-number-input>
+         
+      </vue-formulate>
+    </div>
 
 </template>
 
@@ -15,8 +15,7 @@ import VuePhoneNumberInput from 'vue-phone-number-input';
 export default {
   name: 'App',
   components: {
-    VueFormulate,
-    VuePhoneNumberInput
+    VueFormulate, VuePhoneNumberInput
       
   }
 }
@@ -27,10 +26,6 @@ export default {
 
 <style>
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  color: #2c3e50;
-  margin: 10vh 20vw;
+ margin: 10vh 35vw;
 }
 </style>

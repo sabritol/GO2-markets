@@ -1,32 +1,44 @@
 <template>
   <div>
     <h1>A little about you</h1>
-    <h4> Please fill some of the basics details to get started.</h4>
-    <FormulateForm v-model="formValues" @submit="handleSubmit">
-      <FormulateInput name="name" placeholder="First Name" validation="required" label-class="name-placeholder " />
-      <FormulateInput name="lastname" placeholder="Last Name" validation="required" />
-      <VuePhoneNumberInput v-model="VuePhoneNumberInput" />
-<!-- 
-  <FormulateInput
-  v-model="value"
-  :options="{first: 'Buyer', second: 'Seller'}"
-  type="radio"
-  label="Select your role"
-/> -->
+    
+    <p> Please fill some of the basics details to get started.</p>
+    <FormulateForm v-model="formValues" @submit="handleSubmit" @input="performValidation"
+        ref="form" >
 
-<FormulateInput
-  v-model="value"
-  type="radio"
-  label="Buyer"
-/>
-
-<FormulateInput
-  v-model="value"
-  type="radio"
-  label="Seller"
-/>
+      <div class="names">
+      <FormulateInput name="name" placeholder="First Name"  />
+      <FormulateInput name="lastname" placeholder="Last Name"  />
       
-      <FormulateInput type="submit" label="Submit" />
+      </div>   
+
+          
+      <!-- <div class="phone"> -->
+      <FormulateInput
+      v-model="VuePhoneNumberInput"
+       type="number"
+       validation="required" />
+      <!-- </div>    -->
+
+
+      <h3>Select your role</h3>
+      <p> Choose a role that better defines you. </p>
+      <div class="role">
+      <FormulateInput
+      v-model="value"
+      type="radio"
+      label="Buyer"
+      style=""
+      />
+
+      <FormulateInput
+      v-model="value"
+      type="radio"
+      label="Seller"
+      />
+      </div>  
+          
+      <FormulateInput type="submit" label="Submit" :disabled="hasErrors"/>
     </FormulateForm>
     <h3>Values:</h3>
     {{formValues}}
@@ -40,12 +52,90 @@ export default {
     formValues: {},
     VuePhoneNumberInput: {}
   }),
+
+    // hasErrors: true
   methods: {
     handleSubmit() {
-        console.log(this.formValues)
-    }
+        console.log(this.formValues && this.VuePhoneNumberInput)}
+  
+      }
   }
+
+    // async performValidation () {
+    //   this.hasErrors = await this.$refs.form.hasValidationErrors()
+    // }
+
   
-  
-};
+
+</script>
+
+<style scoped>
+h1 {
+margin: 3%;  
+position: static;
+width: 268px;
+height: 42px;
+left: 0px;
+top: 0px;
+font-style:normal;
+font-weight: 600;
+font-size: 36px;
+line-height: 42px;
+text-align:left;
+letter-spacing: -0.06em;
+color: #242424;
+font-family: 'Work Sans', sans-serif;}
+
+p {
+position: static;
+width: 264px;
+height: 48px;
+left: 0px;
+top: 50px;
+font-family: 'Work Sans', sans-serif;
+font-style: normal;
+font-weight: normal;
+font-size: 16px;
+line-height: 150%;
+letter-spacing: -0.06em;
+color: #242424;
+flex: none;
+order: 1;
+flex-grow: 0;
+margin: 0px 8px;
+text-align:left;
+
+}
+.names {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  position: static;
+  }
+.role {
+  display: grid;
+  grid-template-columns: 1fr 1fr
+
+}  
+
+h3 {
+position: static;
+width: 138px;
+height: 23px;
+left: 0px;
+top: 0px;
+font-family: 'Work Sans', sans-serif;
+font-style: normal;
+font-weight: 600;
+font-size: 20px;
+line-height: 23px;
+text-align:left;
+letter-spacing: -0.06em;
+color: #242424;
+flex: none;
+order: 0;
+flex-grow: 0;
+margin: 0px 8px;
+}
+
+</style>
 
