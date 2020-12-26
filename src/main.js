@@ -7,9 +7,9 @@ import VuePhoneNumberInput from 'vue-phone-number-input';
 import 'vue-phone-number-input/dist/vue-phone-number-input.css';
 
 // Vue.use(VueFormulate, VuePhoneNumberInput)
-Vue.use(VueFormulate, {
-  plugins: [ VuePhoneNumberInput ]
-})
+Vue.use(VueFormulate)
+
+Vue.component ('vue-phone-number-input', VuePhoneNumberInput);
 
 
 // Globally register VuePhoneNumberInput component beacuse I'm going to use it just once, 
