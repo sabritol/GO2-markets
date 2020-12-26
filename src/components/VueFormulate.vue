@@ -20,6 +20,16 @@
        validation="required" />
       <!-- </div>    -->
 
+      
+       <Vue-phone-number-input v-model="phone"
+      :disabled-fetching-country="true" 
+      :no-use-browser-locale="true"
+      required
+      placeholder="Enter Mobile Number"
+
+      >
+      </Vue-phone-number-input>
+    
 
       <h3>Select your role</h3>
       <p> Choose a role that better defines you. </p>
